@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         speed = 10f;
-        jump = 300f;
+        jump = 250f;
         rb = GetComponent<Rigidbody2D>();   //get the rigidbody of the object 
     }
 
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(speed * move, rb.velocity.y);     //change the value of the rb to move 
 
         //single jump limit 
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (Input.GetButtonDown("Jump") && !isJumping) 
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             isJumping = true;
@@ -35,11 +35,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other) 
     {
-        if (other.gameObject.CompareTag("Platform"))
+        if (other.gameObject.CompareTag("Platform")) 
         {
-            isJumping = false;
+            isJumping = false; 
         }
     }
 }
