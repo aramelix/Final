@@ -10,15 +10,15 @@ public class CameraMoves : MonoBehaviour
     // Update is called once per frame 
     void Update() 
     {
-        //transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -10);       //camera follows player left and right
+        transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -10);       //camera follows player left and right 
 
     }
 
-    void OnTriggerEnter2D(Collider2D other) 
-    {
-        if (other.tag == "Player" ) 
-        {
-            transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -10);       //camera follows player left and right
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D other) 
+    //{
+        //if (other.tag == "Player" ) 
+        //{ 
+        //    transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -10);       //camera follows player left and right 
+        //}
+    //}
 }

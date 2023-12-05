@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         speed = 10f;
-        jump = 250f;
+        jump = 300f;
         rb = GetComponent<Rigidbody2D>();   //get the rigidbody of the object 
     }
 
@@ -40,6 +40,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Platform")) 
         {
             isJumping = false; 
-        }
+        } 
     }
 }
