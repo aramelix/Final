@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
     {
         currentHealth -= amount; //if you get hit, health lowers
 
-        if (currentHealth == 2)
+        if (currentHealth == 2) 
         {
             h2.SetActive(false);        //game object is removed from scene 
         }
