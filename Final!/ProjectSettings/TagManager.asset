@@ -5,14 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
+  - Wall
+  - Wall2
+  - DeadZone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BadGuyWalls
   - Water
   - UI
-  - 
+  - BadGuy
   - 
   - 
   - 

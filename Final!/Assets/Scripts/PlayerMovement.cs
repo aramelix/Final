@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,9 +10,9 @@ public class PlayerMovement : MonoBehaviour
     float speed;     //controls speed of movement 
     float move;            //controls direction of movement 
     public float jump;    // 
-    bool isJumping;         //tracks if object
+    bool isJumping;         //tracks if object 
 
-    Rigidbody2D rb;      //stores the rigidbody in the variable "rb"
+    Rigidbody2D rb;      //stores the rigidbody in the variable "rb" 
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Platform")) 
         {
             isJumping = false; 
-        } 
+        }
+  
+        if (other.gameObject.CompareTag("DeadZone"))  //if the Player falls and collides with this zone..vbgjhvcxccccvvvcccxcvcccvx
+        {
+            SceneManager.LoadScene("GameScene");       //Restart 
+        }
     }
 }
